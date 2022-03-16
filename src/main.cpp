@@ -27,9 +27,6 @@ void etat(){
   StatutPompe = digitalRead(Pompe);
   StatutDetecteur = digitalRead(Relai);
   
-  Serial.print("\t\t  Valeur du relais : ");
-  Serial.println(digitalRead(Relai));
-
   // envoie du statut
   appendPayload("Detecteur", StatutDetecteur);
   appendPayload("Pompe", StatutPompe);
